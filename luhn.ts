@@ -17,7 +17,6 @@ export default class Luhn {
         value -= 9
       }
 
-      console.log(value)
       sum += value
     }
 

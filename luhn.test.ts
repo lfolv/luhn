@@ -5,11 +5,11 @@ describe("Luhn", () => {
     expect(Luhn.valid("1")).toBeFalsy()
   })
 
-  xit("a single zero is invalid", () => {
+  it("a single zero is invalid", () => {
     expect(Luhn.valid("0")).toBeFalsy()
   })
 
-  xit("a simple valid SIN that remains valid if reversed", () => {
+  it("a simple valid SIN that remains valid if reversed", () => {
     expect(Luhn.valid("059")).toBeTruthy()
   })
 

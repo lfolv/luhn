@@ -4,6 +4,23 @@ export default class Luhn {
       return false
     }
 
-    return true
+    let sum = 0
+
+    for (let i = 0; i < input.length; i++) {
+      let value = Number(input[input.length - i - 1])
+
+      if (i % 2 !== 0) {
+        value *= 2
+      }
+
+      if (value > 9) {
+        value -= 9
+      }
+
+      console.log(value)
+      sum += value
+    }
+
+    return sum % 10 === 0
   }
 }

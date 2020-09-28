@@ -1,13 +1,15 @@
 export default class Luhn {
   static valid(input: string) {
-    if (input.length <= 1) {
+    const normalized = input.replace(/\s/g, "")
+
+    if (normalized.length <= 1) {
       return false
     }
 
     let sum = 0
 
-    for (let i = 0; i < input.length; i++) {
-      let value = Number(input[input.length - i - 1])
+    for (let i = 0; i < normalized.length; i++) {
+      let value = Number(normalized[normalized.length - i - 1])
 
       if (i % 2 !== 0) {
         value *= 2

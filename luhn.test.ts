@@ -13,15 +13,15 @@ describe("Luhn", () => {
     expect(Luhn.valid("059")).toBeTruthy()
   })
 
-  xit("a valid Canadian SIN", () => {
+  it("a valid Canadian SIN", () => {
     expect(Luhn.valid("055 444 285")).toBeTruthy()
   })
 
-  xit("invalid Canadian SIN", () => {
+  it("invalid Canadian SIN", () => {
     expect(Luhn.valid("055 444 286")).toBeFalsy()
   })
 
-  xit("invalid credit card", () => {
+  it("invalid credit card", () => {
     expect(Luhn.valid("8273 1232 7352 0569")).toBeFalsy()
   })
 
